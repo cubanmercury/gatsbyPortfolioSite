@@ -1,112 +1,94 @@
 <p align="center">
-  <a href="https://cara.lekoarts.de">
-    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby Starter Portfolio: Cara
+  gatsby-starter-typescript-plus
 </h1>
 
-<p align="center">
-  <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Gatsby Starter Portfolio: Cara is released under the MIT license." />
-  </a>
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
-  <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
-    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
-  </a>
-  <a href="https://app.netlify.com/sites/portfolio-cara/deploys">
-      <img src="https://api.netlify.com/api/v1/badges/88bbaef1-6f83-4894-8acd-e6512ff39265/deploy-status" alt="Netlify Status" />
-    </a>
-</p>
+> A starter kit for TypeScript-based Gatsby projects with sensible defaults.
 
-Playful and Colorful One-Page portfolio featuring Parallax effects and animations. Using the Gatsby Theme [`@lekoarts/gatsby-theme-cara`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-cara).
+This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) websites written in TypeScript. It includes the bare essentials for you to get started (styling, Markdown parsing, minimal toolset).
 
-[**Demo Website**](https://cara.lekoarts.de)
+## 🗒️ Features
 
-Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+- TypeScript
+- ESLint (with custom ESLint rules)
+- Markdown rendering with Remark
+- Basic component structure
+- Styling with [emotion](https://emotion.sh/)
 
-## ✨ Features
+## 🚀 Quick start
 
-- Theme UI-based theming
-- react-spring parallax effect
-- CSS Animations on Shapes
+> A nodejs >= 6.0.0 setup with [yarn](https://yarnpkg.com/) is recommended.
 
-## 🚀 Getting Started
+1.  **Create a Gatsby site.**
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-portfolio-cara) [![Edit gatsby-starter-portfolio-cara](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/LekoArts/gatsby-starter-portfolio-cara/tree/master/)
+    Install `gatsby-cli` package globally on your machine.
 
-1. **Create a Gatsby site.**
+    ```bash
+    # using NPM
+    npm install -g gatsby-cli
 
-Use the Gatsby CLI to create a new site, specifying this project
+    # using YARN
+    yarn global add gatsby-cli
+    ```
 
-```sh
-gatsby new project-name https://github.com/LekoArts/gatsby-starter-portfolio-cara
-```
+    Use the `gatsby-cli` to create a new site and install its dependencies.
 
-2. **Start developing.**
+    ```bash
+    gatsby new project-name https://github.com/resir014/gatsby-starter-typescript-plus
+    ```
 
-Navigate into your new site's directory and start it up.
+2.  **Start developing.**
 
-```sh
-cd project-name
-gatsby develop
-```
+    Move to project's directory.
 
-3. **Open the code and start customizing!**
+    ```bash
+    cd project-name/
+    ```
 
-Your site is now running at `http://localhost:8000`!
+    Start your site.
 
-If you want to learn more about how you can use a Gatsby starter that is configured with a Gatsby theme, you can checkout this [shorter](https://www.gatsbyjs.org/docs/themes/using-a-gatsby-theme/) or [longer](https://www.gatsbyjs.org/tutorial/using-a-theme/) tutorial. The tutorials don't exactly apply to this starter however the concepts are the same.
+    ```bash
+    # using npm
+    npm start
 
-## 📝 Using and modifying this starter
+    # using yarn
+    yarn start
+    ```
 
-**Important Note:** Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the underlying theme!
+    Open source code using your favorite IDE/Text editor and navigate to `src/` directory, this is where your application live.
 
-This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-cara`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-cara).
+3.  **Build your application for production.**
 
-Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-cara/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
+    Once you're finished, you can make production build of your app using:
 
-### Changing content
+    ```bash
+    # using npm
+    npm run build
 
-The content of this project is defined in four `.mdx` files inside the theme's `sections` folder. You can override the files `intro.mdx`, `projects.mdx`, `about.mdx` and `contact.mdx`. This starter has overriden the `intro.mdx` file as an example. Place the other files in the same `src/@lekoarts/gatsby-theme-cara/sections/` folder.
+    # using yarn
+    yarn build
+    ```
 
-You have to use the `<ProjectCard />` component inside `projects.mdx` to display the cards. Example:
+4.  **Deploy your app to Github pages!**
 
-```md
-## Projects
+    After building your application in step 3, you're ready to publish your app and go online!
 
-<ProjectCard title="Freiheit" link="https://www.behance.net/gallery/58937147/Freiheit" bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)">
-This project is my entry to Adobe's #ChallengeYourPerspective contest.
-</ProjectCard>
-```
+    ```bash
+    # using npm
+    npm run deploy
 
-### Change your `static` folder
+    # using yarn
+    yarn deploy
+    ```
 
-The `static` folder contains the icons, social media images and robots.txt. Don't forget to change these files, too!
+## ❤️ Credits
 
-## 🤔 Questions or problems?
+Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
 
-Please open up an issue on the main repository: [LekoArts/gatsby-themes](https://github.com/LekoArts/gatsby-themes). Thanks!
+## 💫 Deploy
 
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on Gatsby's website](https://www.gatsbyjs.org/).
-
-### Themes
-
-- To learn more about Gatsby themes specifically, we recommend checking out the [theme docs](https://www.gatsbyjs.org/docs/themes/).
-
-### General
-
-- **For most developers, I recommend starting with the [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to Gatsby's documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Reference Guides_ and _Gatsby API_ sections in the sidebar.
-
-## 🌟 Supporting me
-
-Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
-
-Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts)!
-
-If you want to hire me for **contract/freelance work**, you can do so! [Get in touch with me!](https://www.lekoarts.de/en/contact)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/resir014/gatsby-starter-typescript-plus)

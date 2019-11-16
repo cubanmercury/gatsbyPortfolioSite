@@ -1,48 +1,58 @@
-require(`dotenv`).config({
-  path: `.env`
-});
-
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Cara - Gatsby Starter Portfolio`
+    title: 'gatsby-starter-typescript-plus',
+    description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
+    keywords: 'gatsbyjs, gatsby, javascript, sample, something',
+    siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
+    author: {
+      name: 'Resi Respati',
+      url: 'https://twitter.com/resir014',
+      email: 'resir014@gmail.com'
+    }
   },
   plugins: [
     {
-      resolve: `@lekoarts/gatsby-theme-cara`,
-      options: {}
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID
+        name: 'content',
+        path: `${__dirname}/src/content`
       }
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-transformer-remark',
       options: {
-        name: `Cara - @lekoarts/gatsby-theme-cara`,
-        shortName: `Cara`,
-        description: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
-        startUrl: `/`,
-        backgroundColor: `#141821`,
-        themeColor: `#f6ad55`,
-        display: `standalone`,
-        icons: [
+        plugins: [
           {
-            src: `/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`
+            resolve: 'gatsby-remark-responsive-iframe',
+            options: {
+              wrapperStyle: 'margin-bottom: 1rem'
+            }
           },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
           {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1140,
+              quality: 90,
+              linkImagesToOriginal: false
+            }
           }
         ]
       }
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-typescript`
+    'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com'
+      }
+    },
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet'
   ]
-};
+}
