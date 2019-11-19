@@ -4,7 +4,8 @@ import styled from '@emotion/styled'
 import { dimensions } from '../styles/variables'
 
 const StyledPage = styled.div`
-  display: block;
+  display: flex;
+  justify-content: center;
   flex: 1;
   position: relative;
   padding: ${dimensions.containerPadding}rem;

@@ -31,6 +31,19 @@ const HomepageLink = styled(Link)`
   }
 `
 
+const NavLink = styled(Link)`
+  color: ${colors.white};
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 15px;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: #222;
+  }
+`
+
 interface HeaderProps {
   title: string
 }
@@ -39,6 +52,9 @@ const Header: React.FC<HeaderProps> = ({ title }) => (
   <StyledHeader>
     <HeaderInner>
       <HomepageLink to="/">{title}</HomepageLink>
+      <NavLink to="/portfolio">Portolio</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
+      <NavLink to="/portfolio">Portolio</NavLink>
     </HeaderInner>
   </StyledHeader>
 )

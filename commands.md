@@ -19,3 +19,9 @@
 - Lint-staged allows us to run a linter over just the files which are being staged for a commit. (.lintstagedrc.json)
 - This will run your lint:fix script on commit whilst also running Prettier on _.scss , _.json and \*.md files. This will only run on files that are staged.
 - If you do want to be able to commit ignoring the linting, you can add a `--no-verify` to your commit command in the terminal. ie, (`git commit -m "commit message" --no-verify`)
+
+## Front-end tools
+
+## Deployment
+
+https://www.gatsbyjs.org/tutorial/part-one/#deploying-a-gatsby-site
